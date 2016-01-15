@@ -1,13 +1,3 @@
-// A dynamic action plug-in function can access it's current context with the "this" object.
-// It contains for example "action" which stores the dynamic attributes attribute01 - attribute10 and
-// the ajaxIdentifier used for the AJAX call. Inside the function you can use
-// "this.affectedElements" to get a jQuery object which contains all the affected
-// DOM elements our dynamic action should be performed on.
-//
-// For dynamic action plug-in functions you should use a function name which is
-// unique, so it doesn't get in conflict with existing functions. Best practise
-// is to use the same name as used for the plug-in internal name.
-
 function user_demovicj_calc_badge() {
   // It's better to have named variables instead of using
   // the generic ones, that makes the code more readable
@@ -19,7 +9,7 @@ function user_demovicj_calc_badge() {
   // Set session state with the AJAX request for all page items which are defined
   // in our "Page Items to submit" attribute. Again we can use jQuery.each to
   // loop over the array of page items.
-  if (lPageItemsToSubmit != '') {
+  if (lPageItemsToSubmit) {
   jQuery.each(
     lPageItemsToSubmit.split(','), // this will create an array
     function() {
@@ -37,8 +27,17 @@ function user_demovicj_calc_badge() {
   var position = p.position();
   var w  = p.width() + obj.l_offset;
   var dv_badge = 'badge-'+obj.badge_id;
-  //remove badge created before - refresh 
-  $('div#' + dv_badge).remove();
   //add badge div next to jQuery selector selected item
-  $(obj.selector).after('<div id="'+dv_badge+'" class="badge" style="left:' + w + 'px;top:' + obj.l_top + 'px;">'+ obj.badge +'</div>');
+  if ($(obj.selector).is("input") || $(obj.selector).is("textarea")) {
+    //remove badge created before - refresh 
+    $('div#' + dv_badge).remove();
+    //add badge div next to jQuery selector selected item
+    $(obj.selector).after('<div id="'+dv_badge+'" class="badge" style="left:' + w + 'px;top:' + obj.l_top + 'px;">'+ obj.badge +'</div>');
+    }
+  else {
+    //remove badge created before - refresh 
+    $('span#' + dv_badge).remove();
+    //add badge div next to jQuery selector selected item
+    $(obj.selector).append('<span id="'+dv_badge+'" class="badge" style="left:' + w + 'px;top:' + obj.l_top + 'px;">'+ obj.badge +'</span>');
+    }
 };
