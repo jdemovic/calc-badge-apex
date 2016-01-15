@@ -9,5 +9,5 @@ Allowed parameters are:<br>
 <b>SQL Query:</b> sql query returns one number value<br>
 <b>jQuery selector:</b> Paste jquery selector to the item where you want to show badge<br>
 <b>Left offset:</b> value in pixels (final left position is calculated as width of selected item + Left offset value)<br>
-<b>Top:</b> CSS top style attribute for badge div<br>
+<b>Top:</b> CSS top style attribute for badge div/span<br>
 <b>Page items to submit:</b> Paste items which should be submitted when sql query is executed
