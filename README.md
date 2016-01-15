@@ -16,7 +16,7 @@ Allowed parameters are:<br>
 
 ## Installation
 
-import file <b>dynamic_action_plugin_user_demovicj_apex_calc_badge.sql<b> in APEX
+import file <b>dynamic_action_plugin_user_demovicj_apex_calc_badge.sql</b> in APEX
 
 ## Demo Application
 https://apex.oracle.com/pls/apex/f?p=16502:14
