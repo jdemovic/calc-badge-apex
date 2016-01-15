@@ -1,8 +1,10 @@
 # calc-badge-apex
-APEX Plugin
+###Calc Badge APEX Plugin
 
 Oracle apex plugin for APEX 5.0 and above.
-This plugin alows user to show badge style IOS over the aeach item defined by jQuery selector.
+This plugin alows user to show badge style IOS over the eaach item defined by jQuery selector.
+Plugin creates div or span element based on mentioned object type.
+New DIV element is created for input and textarea. For other object types SPAN element is created.
 
 Allowed parameters are:<br>
 
@@ -11,3 +13,12 @@ Allowed parameters are:<br>
 <b>Left:</b> value in pixels (final left position is calculated as width of selected item + Left value)<br>
 <b>Top:</b> CSS top style attribute for badge div/span<br>
 <b>Page items to submit:</b> Paste items which should be submitted when sql query is executed
+
+## Installation
+
+import file dynamic_action_plugin_user_demovicj_apex_calc_badge.sql in APEX
+
+## Demo Application
+https://apex.oracle.com/pls/apex/f?p=16502:14
+
+
