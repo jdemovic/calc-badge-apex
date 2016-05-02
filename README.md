@@ -2,7 +2,7 @@
 ###Calc Badge APEX Plugin
 
 Oracle apex plugin for APEX 5.0 and above.
-This plugin alows user to show badge style IOS over the eaach item defined by jQuery selector.
+This plugin alows user to show badge style IOS over the each item defined by jQuery selector.
 Plugin creates div or span element based on mentioned object type.
 New DIV element is created for input and textarea. For other object types SPAN element is created.
 
